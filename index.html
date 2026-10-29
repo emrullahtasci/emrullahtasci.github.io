@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emrullah Taşcı</title>
+  <meta name="description" content="Emrullah Taşcı: MIS student and 42 Kocaeli cadet focused on DevOps and SAP ABAP. Projects, experience and CV.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5F4EF;
+      --surface: #FCFCFA;
+      --text: #0F1B2D;
+      --muted: #4A5568;
+      --border: #DCDDD6;
+      --accent: #1D64B5;
+      --accent-soft: #E3ECF6;
+      --mono: 'JetBrains Mono', 'Courier New', monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0D1626;
+        --surface: #132036;
+        --text: #E8EDF4;
+        --muted: #A9B6C8;
+        --border: #24344F;
+        --accent: #5FA8F5;
+        --accent-soft: #1A2D4A;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
+    nav .logo { font-family: var(--mono); font-weight: 600; color: var(--text); }
+    nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
+    nav ul a { color: var(--muted); }
+    @media (max-width: 640px) { nav ul { display: none; } }
+
+    header { padding: 96px 0 72px; }
+    .eyebrow { font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; margin: 0 0 12px; }
+    h1 { font-size: clamp(40px, 8vw, 64px); line-height: 1.05; margin: 0 0 20px; }
+    .lead { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 0 32px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    }
+    .btn:hover { text-decoration: none; border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    @media (prefers-color-scheme: dark) { .btn.primary { color: #0D1626; } }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+    section { padding: 56px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 28px; margin: 0 0 28px; }
+    h3 { font-size: 19px; margin: 0; }
+
+    .terminal {
+      background: #0F1B2D; color: #E6ECF3; border-radius: 12px; padding: 24px;
+      font-family: var(--mono); font-size: 14px; line-height: 1.8; overflow-x: auto;
+    }
+    .terminal .prompt { color: #F08A3C; }
+    .terminal .key { color: #8FB8E8; display: inline-block; min-width: 96px; }
+
+    .timeline { display: grid; gap: 20px; }
+    .item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
+    .item .meta { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 4px 0 8px; }
+    .item p { margin: 0; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 22px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { font-family: var(--mono); font-size: 12px; background: var(--accent-soft); color: var(--accent); padding: 2px 8px; border-radius: 999px; }
+
+    .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .skills h3 { font-size: 15px; color: var(--muted); font-weight: 500; margin-bottom: 8px; }
+
+    footer { padding: 40px 0 64px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="logo">emrullah@42:~$</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">DevOps &amp; SAP ABAP</p>
+    <h1>Emrullah Taşcı</h1>
+    <p class="lead">Management Information Systems student and 42 Kocaeli cadet. I build containerized apps, automate their delivery, and have hands-on experience as an SAP ABAP developer intern.</p>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/emrullahtasci" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <!-- LINKEDIN: uncomment and set the URL once it is known
+      <a class="btn" href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a>
+      -->
+      <a class="btn" href="mailto:tasci.44@icloud.com">Email</a>
+      <!-- CV: uncomment once cv.pdf is added to this repo
+      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      -->
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="terminal" role="img" aria-label="whoami output: Emrullah Taşcı, Mehmet Akif Ersoy University and 42 Kocaeli, Management Information Systems, focus DevOps and SAP ABAP, based in Istanbul">
+      <div><span class="prompt">emrullah@42:~$</span> whoami</div>
+      <div><span class="key">name</span> Emrullah Taşcı</div>
+      <div><span class="key">school</span> Mehmet Akif Ersoy University &amp;&amp; 42 Kocaeli</div>
+      <div><span class="key">major</span> Management Information Systems</div>
+      <div><span class="key">focus</span> DevOps &amp; SAP ABAP</div>
+      <div><span class="key">os</span> Linux</div>
+      <div><span class="key">location</span> Istanbul, Turkey</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="item">
+        <h3>SAP ABAP Developer Intern</h3>
+        <div class="meta">Summer 2024</div>
+        <p>Worked as an ABAP developer intern in an SAP development team.</p>
+      </div>
+      <div class="item">
+        <h3>DevOps Intern · Solvia Digital Solutions</h3>
+        <div class="meta">Summer 2023</div>
+        <p>Learned Docker fundamentals and got an overview of the DevOps workflow: version control, CI/CD and release processes.</p>
+      </div>
+      <div class="item">
+        <h3>DevOps Training · Acunmedya Akademi</h3>
+        <div class="meta">Training program</div>
+        <p>Docker, Linux and DevOps workflows. Final project: <a href="https://github.com/emrullahtasci/guestbook" target="_blank" rel="noopener">Guestbook</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="grid">
+      <a class="card" href="https://github.com/emrullahtasci/guestbook" target="_blank" rel="noopener">
+        <h3>Guestbook</h3>
+        <p>Flask + PostgreSQL behind an Nginx reverse proxy with Adminer. Runs as a systemd service; cron archives logs and backs up the database. CI spins up all four containers.</p>
+        <div class="tags"><span class="tag">Docker Compose</span><span class="tag">Nginx</span><span class="tag">systemd</span><span class="tag">cron</span></div>
+      </a>
+      <a class="card" href="https://github.com/emrullahtasci/task-api" target="_blank" rel="noopener">
+        <h3>Task API</h3>
+        <p>Containerized REST API. A GitHub Actions pipeline runs tests, smoke-tests the Docker stack and publishes the image to GHCR.</p>
+        <div class="tags"><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">GitHub Actions</span></div>
+      </a>
+      <a class="card" href="https://github.com/emrullahtasci/42-Python-Projects" target="_blank" rel="noopener">
+        <h3>42 Python Projects</h3>
+        <p>The 42 Python curriculum: basics, OOP, exceptions, file I/O, abstract classes, environments, Pydantic and functional programming.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">OOP</span><span class="tag">Pydantic</span></div>
+      </a>
+      <a class="card" href="https://github.com/emrullahtasci/libft" target="_blank" rel="noopener">
+        <h3>libft</h3>
+        <p>My own C library: re-implementations of standard libc functions plus linked-list helpers, used across later 42 projects.</p>
+        <div class="tags"><span class="tag">C</span><span class="tag">Makefile</span></div>
+      </a>
+      <a class="card" href="https://github.com/emrullahtasci/printf" target="_blank" rel="noopener">
+        <h3>ft_printf</h3>
+        <p>A custom printf with variadic arguments and format conversions.</p>
+        <div class="tags"><span class="tag">C</span><span class="tag">variadic functions</span></div>
+      </a>
+      <a class="card" href="https://github.com/emrullahtasci/get_next_line" target="_blank" rel="noopener">
+        <h3>get_next_line</h3>
+        <p>Reads a file descriptor line by line with static buffer management.</p>
+        <div class="tags"><span class="tag">C</span><span class="tag">file descriptors</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Languages</h3>
+        <div class="tags"><span class="tag">C</span><span class="tag">Python</span><span class="tag">SAP ABAP</span><span class="tag">Bash</span><span class="tag">C#</span><span class="tag">SQL</span></div>
+      </div>
+      <div>
+        <h3>DevOps</h3>
+        <div class="tags"><span class="tag">Linux</span><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Nginx</span><span class="tag">GitHub Actions</span><span class="tag">systemd</span><span class="tag">cron</span></div>
+      </div>
+      <div>
+        <h3>Data &amp; tools</h3>
+        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">SQL Server</span><span class="tag">Flask</span><span class="tag">Git</span></div>
+      </div>
+      <div>
+        <h3>Languages spoken</h3>
+        <div class="tags"><span class="tag">Turkish (native)</span><span class="tag">English (fluent)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education &amp; Community</h2>
+    <div class="timeline">
+      <div class="item">
+        <h3>42 Kocaeli</h3>
+        <div class="meta">Software Engineering Program (Common Core) · 2025 – Present</div>
+        <p>Peer-to-peer, project-based curriculum: C, Unix, algorithms, system programming.</p>
+      </div>
+      <div class="item">
+        <h3>Mehmet Akif Ersoy University</h3>
+        <div class="meta">B.S. Management Information Systems · 2022 – 2027</div>
+        <p>President of the university IT club.</p>
+      </div>
+      <div class="item">
+        <h3>Istanbul University, Open Education Faculty</h3>
+        <div class="meta">Associate Degree, Web Design and Coding · 2023 – 2025</div>
+      </div>
+      <div class="item">
+        <h3>GDG Burdur · Genç Akademi Community</h3>
+        <div class="meta">Organizer &amp; Leader · Oct 2023 – Present</div>
+        <p>Organizing tech talks and workshops for the local developer community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Emrullah Taşcı · <a href="https://github.com/emrullahtasci" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:tasci.44@icloud.com">tasci.44@icloud.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
