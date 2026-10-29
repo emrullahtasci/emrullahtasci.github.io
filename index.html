@@ -85,6 +85,14 @@
     .item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
     .item .meta { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 4px 0 8px; }
     .item p { margin: 0; color: var(--muted); }
+    .item.with-media { display: flex; gap: 24px; align-items: center; }
+    .item.with-media img { width: 300px; flex-shrink: 0; border-radius: 8px; border: 1px solid var(--border); }
+    @media (max-width: 640px) {
+      .item.with-media { flex-direction: column; align-items: stretch; }
+      .item.with-media img { width: 100%; }
+    }
+    .team { color: var(--accent); font-weight: 600; }
+    .badge { display: inline-block; font-family: var(--mono); font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-left: 6px; vertical-align: middle; }
 
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
     .card {
@@ -227,10 +235,13 @@
     <h2>Yarışma Projeleri</h2>
     <div class="timeline">
 
-      <div class="item">
-        <h3>Toprak Bankası</h3>
-        <div class="meta">Teknofest · Tarım Teknolojileri Yarışması · Bireysel proje</div>
-        <p>Türkiye’de 5 yıldır işlenmeyen tarım arazilerini yatırımcılarla buluşturan, yapay zekâ destekli bir platform önerisi. Arazi sahibi mobil uygulamadan fotoğraf ve belgeyle başvuruyor; sistem Sentinel-2 uydu verileri ve geçmiş verim kayıtlarıyla arazinin son 5 yıllık potansiyelini Random Forest modeliyle puanlıyor; yatırımcı bu risk raporuna göre projeye ortak oluyor. Problem analizini, sistem tasarımını ve proje raporunu tek başıma hazırladım.</p>
+      <div class="item with-media">
+        <img src="images/toprak-bankasi.jpg" alt="Toprak Bankası mobil uygulamasının yatırımcı ekranı: toplam yatırım, beklenen kâr ve NDVI analizi" loading="lazy">
+        <div>
+          <h3>Toprak Bankası <span class="badge">Devam ediyor</span></h3>
+          <div class="meta"><strong class="team">Korkut Team</strong> · Teknofest Tarım Teknolojileri Yarışması</div>
+          <p>Türkiye’de 5 yıldır işlenmeyen tarım arazilerini yatırımcılarla buluşturan, yapay zekâ destekli bir platform. Arazi sahibi mobil uygulamadan fotoğraf ve belgeyle başvuruyor; sistem Sentinel-2 uydu verileri ve geçmiş verim kayıtlarıyla arazinin son 5 yıllık potansiyelini Random Forest modeliyle puanlıyor; yatırımcı bu risk raporuna göre projeye ortak oluyor.</p>
+        </div>
       </div>
 
     </div>
