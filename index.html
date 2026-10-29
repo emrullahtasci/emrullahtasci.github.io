@@ -92,6 +92,8 @@
       .item.with-media img { width: 100%; }
     }
     .team { color: var(--accent); font-weight: 600; }
+    .item p.result { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .item p.result strong { color: var(--text); }
     .badge { display: inline-block; font-family: var(--mono); font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-left: 6px; vertical-align: middle; }
 
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
@@ -238,9 +240,10 @@
       <div class="item with-media">
         <img src="images/toprak-bankasi.jpg" alt="Toprak Bankası mobil uygulamasının yatırımcı ekranı: toplam yatırım, beklenen kâr ve NDVI analizi" loading="lazy">
         <div>
-          <h3>Toprak Bankası <span class="badge">Devam ediyor</span></h3>
+          <h3>Toprak Bankası <span class="badge">83.50 / 100 puan</span><span class="badge">Geliştirme devam ediyor</span></h3>
           <div class="meta"><strong class="team">Korkut Team</strong> · Teknofest Tarım Teknolojileri Yarışması</div>
           <p>Türkiye’de 5 yıldır işlenmeyen tarım arazilerini yatırımcılarla buluşturan, yapay zekâ destekli bir platform. Arazi sahibi mobil uygulamadan fotoğraf ve belgeyle başvuruyor; sistem Sentinel-2 uydu verileri ve geçmiş verim kayıtlarıyla arazinin son 5 yıllık potansiyelini Random Forest modeliyle puanlıyor; yatırımcı bu risk raporuna göre projeye ortak oluyor.</p>
+          <p class="result"><strong>Sonuç:</strong> Proje, Teknofest ön değerlendirme raporunda 100 üzerinden <strong>83.50</strong> puan aldı. Yarışma sürecinden sonra da projeyi bitirmek için çalışmaya devam ediyoruz: hedef, mobil uygulamanın ve verimlilik puanlama modelinin çalışan bir prototipini ortaya çıkarmak.</p>
         </div>
       </div>
 
