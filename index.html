@@ -85,11 +85,12 @@
     .item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
     .item .meta { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 4px 0 8px; }
     .item p { margin: 0; color: var(--muted); }
-    .item.with-media { display: flex; gap: 24px; align-items: center; }
-    .item.with-media img { width: 300px; flex-shrink: 0; border-radius: 8px; border: 1px solid var(--border); }
+    .item.with-media { display: flex; gap: 24px; align-items: stretch; }
+    /* Same width, but the image grows to the card's full height */
+    .item.with-media img { width: 300px; flex-shrink: 0; object-fit: cover; object-position: 74% center; border-radius: 8px; border: 1px solid var(--border); }
     @media (max-width: 640px) {
-      .item.with-media { flex-direction: column; align-items: stretch; }
-      .item.with-media img { width: 100%; }
+      .item.with-media { flex-direction: column; }
+      .item.with-media img { width: 100%; height: 200px; object-position: 30% center; }
     }
     .team { color: var(--accent); font-weight: 600; }
     .item p.result { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
